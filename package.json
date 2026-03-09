@@ -1,6 +1,6 @@
 {
   "name": "@seeker8/simple-npm-package-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "repository": {
     "type": "git",
@@ -12,6 +12,5 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
