@@ -1,6 +1,13 @@
 name: Publish Package to npmjs
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
 
 jobs:
   build:
@@ -17,6 +24,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@seeker8'
       - run: npm ci
+      - run: npm version ${{ inputs.version }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
