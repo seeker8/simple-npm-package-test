@@ -22,4 +22,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Display result
-        run: "echo 'Script Result: ${{ steps.composite-action.outputs.result }}'"
+        run: echo 'Script Result:' ${{ steps.composite-action.outputs.result }}
