@@ -9,9 +9,8 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v5
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v4
+      - name: Use composite action
+        uses: ./.github/actions/my-composite-action
         with:
           node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
