@@ -1,13 +1,6 @@
 name: Publish Package to npmjs
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        type: choice
-        options:
-          - major
-          - minor
-          - patch
 
 jobs:
   build:
