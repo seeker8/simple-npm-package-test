@@ -26,5 +26,5 @@ runs:
         scope: ${{ inputs.scope }}
     - name: Run script
       id: run-script
-      run: echo "result=success" >> $GITHUB_OUTPUT
+      run: echo "result=Success" >> "$GITHUB_OUTPUT"
       shell: bash
